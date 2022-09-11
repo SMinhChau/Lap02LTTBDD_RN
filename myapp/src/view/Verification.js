@@ -3,25 +3,53 @@ import { useState } from "react";
 import { Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
 import images from "../../assets/index";
 
-function Login({ navigation }) {
+function Verification() {
   const [email, setEmail] = useState("");
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={["rgba(189, 246, 198, 0)", "rgba(189, 246, 198, 1)"]}
+        colors={[
+          "rgba(199, 244, 246, 0)",
+          "rgba(209, 244, 246, 1)",
+          "rgba(229, 244, 245, 1)",
+          "rgba(0, 204, 249, 1)",
+        ]}
         style={styles.background}
       >
-        <Image source={images.group} style={styles.logo} />
-        <Text style={styles.textTitle}>FORGET PASSWORD</Text>
+        <Text style={styles.textLogo}>CODE</Text>
+        <Text style={styles.textTitle}>VERIFICATION</Text>
         <Text style={styles.text}>
-          Provide your account’s email for which you want to reset your password
+          Enter ontime password sent on ++849092605798
         </Text>
         <View style={styles.viewInput}>
-          <Image source={images.mail} style={styles.logoMail} />
           <TextInput
             style={styles.input}
             value={email}
-            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextInput
+            style={styles.input}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </View>
@@ -30,10 +58,9 @@ function Login({ navigation }) {
           colors={["rgba(227, 192, 0, 1)", "rgba(227, 192, 0, 1)"]}
         >
           <Button
-            title="NEXT"
+            title="VERIFICATION"
             color={"#000"}
             accessibilityLabel="Learn more about this purple button"
-            onPress={() => navigation.navigate("Verification")}
           />
         </LinearGradient>
       </LinearGradient>
@@ -41,7 +68,7 @@ function Login({ navigation }) {
   );
 }
 
-export default Login;
+export default Verification;
 
 const styles = StyleSheet.create({
   container: {
@@ -61,11 +88,14 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     flexDirection: "column",
   },
-  logo: {
-    marginTop: 100,
+  textLogo: {
+    marginTop: 130,
+    fontSize: 60,
+
+    fontWeight: "700",
   },
   textTitle: {
-    paddingTop: 50,
+    paddingTop: 60,
     fontStyle: "bold",
     fontSize: 25,
     width: 189,
@@ -77,7 +107,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     fontStyle: "bold",
     fontSize: 15,
-    width: 350,
+    width: 302,
     fontWeight: "700",
     lineHeight: "18",
     textAlign: "center",
@@ -94,25 +124,20 @@ const styles = StyleSheet.create({
   viewInput: {
     width: "100%",
     position: "relative",
+    marginTop: 50,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
   },
-  logoMail: {
-    backgroundColor: "#E5E5E5",
-    position: "absolute",
-    top: 52,
-    zIndex: 5,
-    left: 30,
-  },
+
   input: {
-    width: "85%",
+    borderWidth: 1,
+    width: 50,
     height: 50,
     fontSize: 18,
-    paddingLeft: 60,
-    marginTop: 50,
     color: "#000",
+    opacity: 0.5,
     backgroundColor: "#E5E5E5",
   },
 });
