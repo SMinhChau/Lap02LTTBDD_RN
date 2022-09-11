@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text, Image, Button } from "react-native";
+
 import { LinearGradient } from "expo-linear-gradient";
 import images from "../../assets/index";
-function Home() {
+function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -28,6 +29,7 @@ function Home() {
             <Button
               title="LOGIN"
               accessibilityLabel="Learn more about this purple button"
+              onPress={() => navigation.navigate("Login")}
             />
           </LinearGradient>
           <LinearGradient
